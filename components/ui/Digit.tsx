@@ -1,10 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 function Digit({ value }: { value: number }) {
     const [height, setHeight] = useState(70);
+    const ref = useRef(null);
+
+    const isInView = useInView(ref, {
+        once: true,
+        amount: 0.5,
+    });
 
     useEffect(() => {
         const updateHeight = () => {
@@ -21,9 +28,12 @@ function Digit({ value }: { value: number }) {
     }, []);
 
     return (
-        <div className="overflow-hidden" style={{ height }}>
+        <div ref={ref} className="overflow-hidden" style={{ height }}>
             <motion.div
-                animate={{ y: -value * height }}
+                initial={{ y: 0 }}
+                animate={{
+                    y: isInView ? -value * height : 0,
+                }}
                 transition={{
                     duration: 1.8,
                     ease: [0.22, 1, 0.36, 1],

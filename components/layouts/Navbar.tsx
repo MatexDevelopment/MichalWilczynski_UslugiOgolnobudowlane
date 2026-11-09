@@ -9,7 +9,7 @@ export default function Navbar() {
         { name: "Strona główna", href: "#home" },
         { name: "Usługi", href: "#services" },
         { name: "O firmie", href: "#about" },
-        { name: "Nasze realizacje", href: "#about" },
+        { name: "Nasze realizacje", href: "#realizations" },
         { name: "Obszar działania", href: "#area" },
         { name: "Kontakt", href: "#about" }
 
@@ -18,7 +18,9 @@ export default function Navbar() {
     return (
         <nav className="relative z-50 flex items-center justify-between ">
 
-            <img src="/mwilczynski_logo.svg" alt="Logo Michał Wilczyński - Firma Ogólnobudowlana" className="w-30 md:w-60 lg:w-80"/>
+            <a href="#home">
+            <img src="/mwilczynski_logo.svg" alt="Logo Michał Wilczyński - Firma Ogólnobudowlana" className="w-30 md:w-60 lg:w-80 cursor-pointer"/>
+            </a>
 
             <div className="hidden items-center gap-8 xl:flex">
                 {links.map((link) => (
@@ -70,7 +72,7 @@ export default function Navbar() {
                 </button>
 
                 <div className="flex flex-col gap-6 ">
-                    <a href="home"><img src="/mwilczynski_logo.svg" alt="Logo Michał Wilczyński - Firma Ogólnobudowlana"  className="w-40"/></a>
+                    <a href="#home"><img src="/mwilczynski_logo.svg" alt="Logo Michał Wilczyński - Firma Ogólnobudowlana"  className="w-40"/></a>
                     {links.map((link) => (
                         <a
                             key={link.name}
