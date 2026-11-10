@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 
 function Digit({ value }: { value: number }) {
     const [height, setHeight] = useState(70);
@@ -28,7 +27,7 @@ function Digit({ value }: { value: number }) {
     }, []);
 
     return (
-        <div ref={ref} className="overflow-hidden" style={{ height }}>
+        <div ref={ref} className="overflow-hidden" style={{ height }} aria-hidden="true">
             <motion.div
                 initial={{ y: 0 }}
                 animate={{
@@ -40,11 +39,7 @@ function Digit({ value }: { value: number }) {
                 }}
             >
                 {Array.from({ length: 10 }).map((_, i) => (
-                    <div
-                        key={i}
-                        style={{ height }}
-                        className="flex items-center justify-center"
-                    >
+                    <div key={i} style={{ height }} className="flex items-center justify-center">
                         {i}
                     </div>
                 ))}

@@ -1,41 +1,39 @@
+import Image from "next/image";
 
 interface Realization {
     name: string;
     image: string;
+    alt: string;
     description: string;
 }
+
 // Pojedyncza karta realizacji
 export default function RealizationCard({
-                             realization,
-                             active,
-                         }: {
+                                            realization,
+                                            active,
+                                        }: {
     realization: Realization;
     active: boolean;
 }) {
     return (
-        <div
+        <article
             className={`
                 relative overflow-hidden rounded-2xl border-2
-                ${active
-                ? "border-primary shadow-lg shadow-primary/20"
-                : "border-primary/50"
-            }
+                ${active ? "border-primary shadow-lg shadow-primary/20" : "border-primary/50"}
             `}
         >
             <div
                 className={`
-        relative
-        ${active
-                    ? "h-[390px] sm:h-[430px]"
-                    : "h-[350px] sm:h-[390px]"
-                }
-    `}
+                    relative
+                    ${active ? "h-[390px] sm:h-[430px]" : "h-[350px] sm:h-[390px]"}
+                `}
             >
-
-                <img
+                <Image
                     src={realization.image}
-                    alt={realization.name}
-                    className="absolute inset-0 w-full h-full object-cover"
+                    alt={realization.alt}
+                    fill
+                    sizes="(max-width: 768px) 75vw, 340px"
+                    className="object-cover"
                 />
 
                 {/* Gradient */}
@@ -43,19 +41,13 @@ export default function RealizationCard({
 
                 {/* Opis */}
                 <div className="absolute bottom-0 left-0 w-full p-4">
-                    <h3 className="text-xl sm:text-2xl font-semibold leading-tight">
-                        {realization.name}
-                    </h3>
+                    <h3 className="text-xl sm:text-2xl font-semibold leading-tight">{realization.name}</h3>
 
                     <div className="h-[5px] w-16 bg-primary rounded-full mt-2" />
 
-                    {active && (
-                        <p className="text-md text-white/80 mt-3">
-                            {realization.description}
-                        </p>
-                    )}
+                    {active && <p className="text-base text-white/80 mt-3">{realization.description}</p>}
                 </div>
             </div>
-        </div>
+        </article>
     );
 }

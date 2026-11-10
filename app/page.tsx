@@ -6,14 +6,14 @@ import Realizations from "@/components/sections/Realizations";
 import Services from "@/components/sections/Services";
 
 export default function Home() {
-  return (
-    <div>
-      <Hero />
-        <Services />
-        <About/>
-      <Realizations />
-        <OperationArea/>
-        <Contact />
-    </div>
-  );
+    return (
+        <main>
+            <Hero />
+            <Services />
+            <About />
+            <Realizations />
+            <OperationArea />
+            <Contact />
+        </main>
+    );
 }

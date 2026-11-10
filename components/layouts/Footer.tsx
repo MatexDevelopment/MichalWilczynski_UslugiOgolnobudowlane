@@ -1,5 +1,5 @@
-"use client"
-import {startTransition, useEffect, useState} from "react";
+"use client";
+import { startTransition, useEffect, useState } from "react";
 
 export default function Footer() {
     const links = [
@@ -28,15 +28,15 @@ export default function Footer() {
                     <a href="#home">
                         <img
                             src="/mwilczynski_logo.svg"
-                            alt="Logo Michał Wilczyński - Firma Ogólnobudowlana"
+                            alt="Logo Michał Wilczyński - Firma Ogólnobudowlana Lębork"
                             className="w-40 md:w-60 lg:w-80 cursor-pointer"
                         />
                     </a>
-                    <p className="text-white/50 font-medium text-sm lg:text-base mt-2">
+                    <address className="not-italic text-white/50 font-medium text-sm lg:text-base mt-2">
                         Firma ogólnobudowlana - Michał Wilczyński <br />
                         ul. Jagodowa 9, 84-300 Lębork <br />
                         NIP: 8411484570
-                    </p>
+                    </address>
                     <p className="text-white/50 mt-5 text-sm lg:text-base max-w-md">
                         Kompleksowe usługi ogólnobudowlane na terenie Lęborka, Trójmiasta i okolic — od prac
                         dekarskich i elewacyjnych, przez fundamenty i remonty, aż po brukarstwo oraz sezonowe
@@ -45,8 +45,8 @@ export default function Footer() {
                 </div>
 
                 <div className="col-span-5 lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-6">
-                    <div className="sm:col-span-2">
-                        <h4 className="text-lg lg:text-xl font-bold uppercase text-white/75">Nawigacja</h4>
+                    <nav aria-label="Nawigacja w stopce" className="sm:col-span-2">
+                        <p className="text-lg lg:text-xl font-bold uppercase text-white/75">Nawigacja</p>
                         <ul className="mt-4 grid grid-cols-2 grid-flow-col grid-rows-3 gap-x-6 gap-y-3 px-2">
                             {links.map((link) => (
                                 <li key={link.href}>
@@ -59,10 +59,10 @@ export default function Footer() {
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </nav>
 
                     <div className="sm:col-span-1">
-                        <h4 className="text-lg lg:text-xl font-bold uppercase text-white/75">Kontakt</h4>
+                        <p className="text-lg lg:text-xl font-bold uppercase text-white/75">Kontakt</p>
                         <ul className="mt-4 flex flex-col gap-3 px-2">
                             <li>
                                 <a
@@ -75,7 +75,7 @@ export default function Footer() {
                             <li>
                                 <a
                                     href="tel:+48502662028"
-                                    className="text-base lg:text-xl text-white/50 hover:text-primarytransition"
+                                    className="text-base lg:text-xl text-white/50 hover:text-primary transition"
                                 >
                                     +48 502 662 028
                                 </a>
@@ -90,7 +90,7 @@ export default function Footer() {
                 © {year} Michał Wilczyński - Usługi Ogólnobudowlane. Wszelkie prawa zastrzeżone.
             </p>
             <div className="w-full flex justify-center mt-3">
-                <img src="/MatexDevelopment_logo.svg" alt="Stworzone przez: MatexDevelopment"/>
+                <img src="/MatexDevelopment_logo.svg" alt="Stworzone przez: Matex Development" />
             </div>
         </footer>
     );

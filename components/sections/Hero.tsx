@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/layouts/Navbar";
 
 export default function Hero() {
@@ -20,7 +19,6 @@ export default function Hero() {
             <Navbar />
 
             <div className="2xl:px-52 md:px-20 px-2 mt-10 lg:mt-20 flex flex-col gap-3 lg:gap-5">
-
                 <h1 className="text-3xl md:text-5xl font-semibold font-heading">
                     Usługi ogólnobudowlane<br />
                     Lębork, Trójmiasto i okolice
@@ -34,25 +32,23 @@ export default function Hero() {
                 </p>
 
                 <div className="flex mt-6 md:mt-10 flex-col md:flex-row items-start gap-4">
-
                     <a
-                        href="tel:502662028"
-                        target="_blank"
+                        href="tel:+48502662028"
+                        aria-label="Zadzwoń: +48 502 662 028"
                         className="bg-primary hover:bg-primary-hover py-2 lg:py-3 px-4 lg:px-5 rounded-xl flex items-center justify-center text-lg lg:text-2xl gap-2 font-bold whitespace-nowrap transition"
                     >
-                        <img src="/icons/telWhite.svg" alt="" className="w-5 md:w-7" />
+                        <img src="/icons/telWhite.svg" alt="" aria-hidden="true" className="w-5 md:w-7" />
                         502 662 028
                     </a>
 
                     <a
                         href="mailto:kontakt@mwilczynski-bud.pl"
-                        target="_blank"
+                        aria-label="Napisz e-mail: kontakt@mwilczynski-bud.pl"
                         className="bg-secondary hover:bg-secondary-hover py-2 lg:py-3 px-4 lg:px-5 rounded-xl flex items-center justify-center text-lg lg:text-2xl gap-2 font-bold whitespace-nowrap transition"
                     >
-                        <img src="/icons/emailWhite.svg" alt="" className="w-5 md:w-7" />
+                        <img src="/icons/emailWhite.svg" alt="" aria-hidden="true" className="w-5 md:w-7" />
                         kontakt@mwilczynski-bud.pl
                     </a>
-
                 </div>
             </div>
         </section>
