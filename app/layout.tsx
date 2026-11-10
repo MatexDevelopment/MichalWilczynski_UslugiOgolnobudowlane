@@ -1,3 +1,4 @@
+import Footer from "@/components/layouts/Footer";
 import type { Metadata } from "next";
 import { Barlow_Condensed } from "next/font/google";
 import "./globals.css";
@@ -23,7 +24,11 @@ export default function RootLayout({
           lang="pl"
           className={`${barlow.variable}  h-full antialiased`}
       >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+      {children}
+      <Footer />
+      </body>
+
       </html>
   );
 }

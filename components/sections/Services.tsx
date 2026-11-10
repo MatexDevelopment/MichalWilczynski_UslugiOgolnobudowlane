@@ -22,7 +22,7 @@ export default function Services(){
             className="
         h-auto
         bg-[#F3EDE1]
-        px-6 md:px-20 2xl:px-52
+        px-6 md:px-20 2xl:px-30
         pt-2
         pb-16 md:pb-28"
 

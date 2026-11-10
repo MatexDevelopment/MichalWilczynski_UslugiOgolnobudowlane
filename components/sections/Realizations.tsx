@@ -56,7 +56,7 @@ export default function Realizations() {
     return (
         <section
             id="realizations"
-            className="h-auto  px-6 md:px-20 2xl:px-52 pt-2 pb-16 md:pb-28 text-white"
+            className="h-auto  px-6 md:px-20 2xl:px-30 pt-2 pb-16 md:pb-28 text-white"
         >
             <section className="2xl:px-52 xl:px-20 px-2 mt-10 lg:mt-20 flex flex-col gap-3 lg:gap-5">
 

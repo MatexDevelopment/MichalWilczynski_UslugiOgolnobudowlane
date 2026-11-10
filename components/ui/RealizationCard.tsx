@@ -1,3 +1,9 @@
+
+interface Realization {
+    name: string;
+    image: string;
+    description: string;
+}
 // Pojedyncza karta realizacji
 export default function RealizationCard({
                              realization,

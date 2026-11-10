@@ -1,14 +1,14 @@
 import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function OperationArea() {
-    const cities:string=["Lębork", "Gdynia", "Sopot", "Gdańsk","i okolice..."]
+    const cities:string[]=["Lębork", "Gdynia", "Sopot", "Gdańsk","i okolice..."]
 
     return(
         <section
             id="area"
             className="
         h-auto
-        px-6 md:px-20 2xl:px-52
+        px-6 md:px-20 2xl:px-30
         pt-2
         pb-16 md:pb-28"
 
